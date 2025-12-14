@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我们 · 耀华科技</title>
+  <style>
+    :root{--bg:#0d1117;--text:#f0f6fc;--accent:#58a6ff;--card:#161b22}
+    @media (prefers-color-scheme: light){
+      :root{--bg:#ffffff;--text:#24292f;--accent:#0969da;--card:#f6f8fa}
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    header{position:fixed;top:0;width:100%;background:rgba(13,17,23,0.95);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid #30363d}
+    nav{max-width:1200px;margin:auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:1.8rem;font-weight:800;color:var(--accent);text-decoration:none}
+    .nav-links a{margin:0 1rem;color:var(--text);text-decoration:none;font-weight:500;transition:0.3s}
+    .nav-links a:hover{color:var(--accent)}
+    .lang a{color:var(--text);font-weight:bold;margin:0 0.5rem}
+    .lang .active{color:var(--accent)}
+    main{padding-top:100px;max-width:1000px;margin:auto;padding:4rem 2rem}
+    h1{font-size:3.5rem;text-align:center;margin:2rem 0;color:var(--accent)}
+    h2{font-size:2rem;margin:3rem 0 1.5rem;color:var(--accent)}
+    p{font-size:1.2rem;margin:1.5rem 0;max-width:800px}
+    ul{list-style:none;padding-left:1rem}
+    li{margin:1rem 0;font-size:1.2rem;position:relative}
+    li:before{content:"·";color:var(--accent);font-size:2rem;position:absolute;left:-1rem;top:-0.5rem}
+    .team{margin:4rem 0}
+    .team p{font-style:italic;color:#8b949e}
+    footer{text-align:center;padding:4rem;color:#8b949e;font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">耀华科技</a>
+      <div class="nav-links">
+        <a href="/">首页</a>
+        <a href="/about.html">组织介绍</a>
+        <a href="/genius.html">天才孵化</a>
+        <a href="/ai-aviation.html">AI航空</a>
+        <a href="/jobs.html">就业机会</a>
+        <a href="/partner.html">合作机会</a>
+        <a href="/buy.html">购买产品</a>
+      </div>
+      <div class="lang">
+        <span class="active">中</span> / <a href="/en/about.html">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>关于耀华科技</h1>
+    <p style="text-align:center;font-size:1.5rem;max-width:900px;margin:auto;">
+      我们用第一性原理点燃天才，<br>
+      用人工智能守护蓝天，<br>
+      用最小的成本，创造最大的希望。
+    </p>
+
+    <h2>我们的使命</h2>
+    <p>耀华科技由一线航空人创立，致力于：</p>
+    <ul>
+      <li>通过“天才孵化计划”，用第一性原理发现并培养能改变世界的思想者</li>
+      <li>构建全球领先的AI航空安全体系，让每一次飞行都更可信、更安全</li>
+      <li>以极致效率，推动人类文明在航空领域的持续进步</li>
+    </ul>
+
+    <h2>我们的团队</h2>
+    <p class="team">
+      一支由43年机务干部领衔的核心团队：<br><br>
+      · 一位从1982年起深耕一线机务43年的干部，亲手守护过无数架飞机的安全<br>
+      · 一位资深老机务，机械系统的绝对权威<br>
+      · 一位电子工程师，飞控与传感器领域的硬核专家<br>
+      · 一位中国顶尖机长，已正式加入，将担任总飞行师<br><br>
+      我们不追逐风口，只做正确的事。<br>
+      我们不靠资本，只靠经验、规则和爱。
+    </p>
+
+    <h2>联系我们</h2>
+    <p>如果你认同我们的理念，欢迎加入或合作：</p>
+    <p style="text-align:center;margin:3rem 0;">
+      <a href="mailto:yaohua@yaohuagrok.com" style="color:var(--accent);font-size:1.3rem;">yaohua@yaohuagrok.com</a>
+    </p>
+  </main>
+
+  <footer>
+    © 2025 耀华科技 · 让世界充满爱与希望
+  </footer>
+</body>
+</html>
