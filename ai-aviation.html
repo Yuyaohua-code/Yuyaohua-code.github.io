@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI航空安全 · 耀华科技</title>
+  <style>
+    :root{--bg:#0d1117;--text:#f0f6fc;--accent:#58a6ff;--card:#161b22}
+    @media (prefers-color-scheme: light){
+      :root{--bg:#ffffff;--text:#24292f;--accent:#0969da;--card:#f6f8fa}
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+    header{position:fixed;top:0;width:100%;background:rgba(13,17,23,0.95);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid #30363d}
+    nav{max-width:1200px;margin:auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-size:1.8rem;font-weight:800;color:var(--accent);text-decoration:none}
+    .nav-links a{margin:0 1rem;color:var(--text);text-decoration:none;font-weight:500;transition:0.3s}
+    .nav-links a:hover{color:var(--accent)}
+    .lang a{color:var(--text);font-weight:bold;margin:0 0.5rem}
+    .lang .active{color:var(--accent)}
+    main{padding-top:100px;max-width:1100px;margin:auto;padding:4rem 2rem}
+    h1{font-size:3.8rem;text-align:center;margin:2rem 0;color:var(--accent)}
+    h2{font-size:2.2rem;margin:4rem 0 1.5rem;color:var(--accent);border-bottom:2px solid var(--accent);padding-bottom:0.5rem}
+    p{font-size:1.2rem;margin:1.5rem 0;max-width:900px;line-height:1.9}
+    ul{list-style:none;padding-left:1rem;max-width:900px}
+    li{margin:2rem 0;font-size:1.2rem;position:relative}
+    li:before{content:"·";color:var(--accent);font-size:2.5rem;position:absolute;left:-1rem;top:-0.8rem;line-height:1}
+    .highlight{background:var(--card);padding:2rem;border-radius:12px;margin:3rem 0;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
+    .highlight p{font-style:italic;font-size:1.3rem}
+    .cta{text-align:center;margin:5rem 0}
+    .btn{display:inline-block;padding:1.2rem 3rem;background:var(--accent);color:#000;font-weight:bold;border-radius:50px;text-decoration:none;font-size:1.3rem;transition:0.3s}
+    .btn:hover{transform:scale(1.05);box-shadow:0 0 20px rgba(88,166,255,0.5)}
+    footer{text-align:center;padding:4rem;color:#8b949e;font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">耀华科技</a>
+      <div class="nav-links">
+        <a href="/">首页</a>
+        <a href="/about.html">组织介绍</a>
+        <a href="/genius.html">天才孵化</a>
+        <a href="/ai-aviation.html">AI航空</a>
+        <a href="/jobs.html">就业机会</a>
+        <a href="/partner.html">合作机会</a>
+        <a href="/buy.html">购买产品</a>
+      </div>
+      <div class="lang">
+        <span class="active">中</span> / <a href="/en/ai-aviation.html">EN</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <h1>AI航空安全体系</h1>
+    <p style="text-align:center;font-size:1.6rem;max-width:900px;margin:3rem auto;font-style:italic;">
+      用人工智能守护蓝天<br>
+      让黑天鹅永远无法起飞
+    </p>
+
+    <div class="section">
+      <h2>我们的目标</h2>
+      <div class="highlight">
+        <p>从第一性原理重构航空安全，让每一次飞行都更可信、更安全、更低碳。</p>
+      </div>
+      <ul>
+        <li>实时QAR分析 + 多源数据融合，提前拦截黑天鹅事件</li>
+        <li>总飞行师辅导通道，一键呼叫专家</li>
+        <li>污染/复杂机场专项训练</li>
+        <li>低碳航路优化，减少碳排放</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>总飞行师团队招募</h2>
+      <p>一位中国顶尖机长已正式加入。</p>
+      <p>我们正在全球招募：</p>
+      <ul>
+        <li>英语总飞行师</li>
+        <li>俄语总飞行师</li>
+        <li>其他语言总飞行师</li>
+      </ul>
+      <p>费用由您自己定价——您的经验，值这个价。</p>
+      <p>欢迎联系加入：yaohua@yaohuagrok.com</p>
+    </div>
+
+    <div class="section">
+      <h2>黑天鹅事件拦截（首批清单）</h2>
+      <p>我们系统化识别并阻止以下风险（更多即将上线）：</p>
+      <ul>
+        <li>火山灰、沙尘暴</li>
+        <li>冰雪结冰、冰雹</li>
+        <li>风切变（微暴流、尾流、山坡风）</li>
+        <li>跑道积水/坑洞</li>
+        <li>晴空乱流、雷雨</li>
+        <li>污染环境（植物、农垦、花粉、鸟击）</li>
+      </ul>
+    </div>
+
+    <div class="cta">
+      <a href="mailto:yaohua@yaohuagrok.com" class="btn">加入AI航空安全体系</a>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 耀华科技 · 用最小的成本，创造最大的希望
+  </footer>
+</body>
+</html>
