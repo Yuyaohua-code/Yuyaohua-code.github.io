@@ -47,18 +47,14 @@
     </nav>
   </header>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 40px auto;">
-  <iframe 
-    src="https://www.youtube.com/embed/yNnGHypTkEY?controls=1&rel=0&playsinline=1&autoplay=0&mute=1&hl=en"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
-    title="YaohuaGrok Introduction" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    allowfullscreen>
-  </iframe>
-  
-  <!-- Sound enable overlay – keep English -->
-  <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 28px; text-shadow: 2px 2px 4px #000;">
-    Click 🔊 (bottom left)<br>to enable sound
+  <iframe src="https://www.youtube.com/embed/yNnGHypTkEY?controls=1&rel=0&playsinline=1" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+          allow="encrypted-media" allowfullscreen></iframe>
+</div>
+   <!-- 添加声音提示层 -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 28px; text-shadow: 2px 2px 8px black; pointer-events: none; z-index: 10;">
+    Click 🔊 (bottom left) to enable sound
+   </div>
   </div>
 </div>
   <section class="hero">
