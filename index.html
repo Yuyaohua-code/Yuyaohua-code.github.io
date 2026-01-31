@@ -207,65 +207,22 @@
               style="background: rgba(22,27,34,0.85); color: #79c0ff; border: 1px solid #30363d; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; outline: none;">
         <option value="/" selected>中文</option>
         <option value="/en/">English</option>
-  <!-- 可点击播放的视频 + 关闭按钮 -->
+<!-- 可点击播放的视频 + 关闭按钮 -->
 <div id="videoContainer" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 40px auto; background: #000;">
   <!-- Thumbnail + Play button (shown initially) -->
-  <div id="videoThumbnail" style="
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: url('https://img.youtube.com/vi/apggpoMpggc/maxresdefault.jpg') center/cover no-repeat;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  ">
-    <div style="
-      width: 100px; height: 100px;
-      background: rgba(0,0,0,0.5);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 40px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
-    ">▶</div>
+  <div id="videoThumbnail" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: url('https://img.youtube.com/vi/apggpoMpggc/maxresdefault.jpg') center/cover no-repeat; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 100px; height: 100px; background: rgba(0,0,0,0.5); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; box-shadow: 0 0 20px rgba(0,0,0,0.6);">▶</div>
   </div>
 
   <!-- Video iframe (hidden initially) -->
-  <iframe id="mainVideo" src="https://www.youtube.com/embed/apggpoMpggc?enablejsapi=1&controls=1&rel=0&playsinline=1" 
-          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; display: none;"
-          allow="encrypted-media; autoplay" allowfullscreen></iframe>
+  <iframe id="mainVideo" src="https://www.youtube.com/embed/apggpoMpggc?enablejsapi=1&controls=1&rel=0&playsinline=1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; display: none;" allow="encrypted-media; autoplay" allowfullscreen></iframe>
 
   <!-- Close button (shown when video plays) -->
-  <button id="closeVideo" style="
-    position: absolute;
-    top: 15px; right: 15px;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 40px; height: 40px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 20;
-    display: none;
-  ">×</button>
+  <button id="closeVideo" style="position: absolute; top: 15px; right: 15px; background: rgba(0,0,0,0.7); color: white; border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 24px; cursor: pointer; z-index: 20; display: none;">×</button>
 </div>
 
 <!-- Watch Intro button (shown after close) -->
-<button id="replayVideo" style="
-  display: none;
-  margin: 20px auto;
-  padding: 12px 24px;
-  background: #a5d6ff;
-  color: #0d1117;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-">
+<button id="replayVideo" style="display: none; margin: 20px auto; padding: 12px 24px; background: #a5d6ff; color: #0d1117; border: none; border-radius: 8px; font-weight: 600; font-size: 1.1rem; cursor: pointer;">
   Watch Intro Video ▶
 </button>
 
@@ -311,12 +268,13 @@
     <a href="/genius.html" class="btn">进入天才孵化计划</a>
     <a href="/ai-aviation.html" class="btn">探索AI航空安全</a>
     <a href="https://www.toutiao.com/article/7589841754602340910/" target="_blank" class="btn" style="background: #ff4500;">阅读白皮书 📜</a>
-    <a href="https://raw.githubusercontent.com/Yuyaohua-code/Yuyaohua-code.github.io/main/assets/AI-Aviation-White-Paper-CN-20251230.pdf"
-       target="_blank" class="btn" style="background: #28a745;">
-       📄 下载白皮书 PDF
+    <a href="https://raw.githubusercontent.com/Yuyaohua-code/Yuyaohua-code.github.io/main/assets/AI-Aviation-White-Paper-CN-20251230.pdf" target="_blank" class="btn" style="background: #28a745;">
+      📄 下载白皮书 PDF
     </a>
   </div>
 </section>
+
+
  
 
   <footer>
