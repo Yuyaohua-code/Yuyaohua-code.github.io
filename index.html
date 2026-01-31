@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>耀华科技 · 天才孵化 × 航空安全 × 人类未来</title>
+  <title>耀华科技 · 天才孵化 × 航空安全 × 人类未来</title><title>Wukong AI Aviation – Yaohua Portfolio</title>
   <style>
     :root{--bg:#0d1117;--text:#f0f6fc;--accent:#58a6ff;--card:#161b22}
     @media (prefers-color-scheme: light){
@@ -30,22 +30,41 @@
 </head>
 <body>
   <header>
-    <nav>
-      <a href="/" class="logo">耀华科技</a>
-      <div class="nav-links">
-        <a href="/">首页</a>
-        <a href="/about.html">组织介绍</a>
-        <a href="/genius.html">天才孵化</a>
-        <a href="/ai-aviation.html">AI航空</a>
-        <a href="/jobs.html">就业机会</a>
-        <a href="/partner.html">合作机会</a>
-        <a href="/buy.html">购买产品</a>
-      </div>
-      <div class="lang">
-        <span class="active">中</span> / <a href="/en/">EN</a>
-      </div>
-    </nav>
-  </header>
+  <nav>
+    <!-- Wukong Monkey Logo + Company Name -->
+    <a href="/" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+      <img 
+        src="https://images.squarespace-cdn.com/content/v1/60dfda46e9db711afe482476/7cabef6a-00ba-457d-a71f-ea26e1dfe80b/Sun+Wukong.png" 
+        alt="Wukong Monkey King" 
+        style="height: 52px; width: auto; border-radius: 50%; box-shadow: 0 2px 10px rgba(88,166,255,0.4);"
+      >
+      <span style="font-size: 1.9rem; font-weight: 800; color: #79c0ff; text-shadow: 0 0 6px rgba(121,192,255,0.5);">
+        耀华科技
+      </span>
+    </a>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="/">首页</a>
+      <a href="/about.html">组织介绍</a>
+      <a href="/genius.html">天才孵化</a>
+      <a href="/ai-aviation.html">AI航空</a>
+      <a href="/jobs.html">就业机会</a>
+      <a href="/partner.html">合作机会</a>
+      <a href="/buy.html">购买产品</a>
+    </div>
+
+    <!-- Language Selector (Dropdown) -->
+    <div class="lang-selector">
+      <select id="langSwitch" 
+              onchange="window.location.href = this.value;"
+              style="background: rgba(22,27,34,0.85); color: #79c0ff; border: 1px solid #30363d; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; outline: none;">
+        <option value="/" selected>中文</option>
+        <option value="/en/">English</option>
+      </select>
+    </div>
+  </nav>
+</header>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 40px auto;">
   <iframe src="https://www.youtube.com/embed/apggpoMpggc?controls=1&rel=0&playsinline=1" 
           style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
