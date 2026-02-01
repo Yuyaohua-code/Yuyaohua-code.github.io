@@ -242,35 +242,48 @@
   50%      { transform: scale(1.3); opacity: 0.9; }
 }
 
-  
+  .。。
 .principles {
   list-style: none;
   padding: 0;
-  margin: 4rem auto 6rem;
+  margin: 4rem auto 6rem;           /* 上下留更多空間，讓列表更突出 */
   max-width: 900px;
   text-align: center;
 }
 
 .principles li {
-  font-size: 1.75rem;               /* 明顯加大，從原來的 1.3rem 提升 */
-  line-height: 2.2;
+  font-size: 1.8rem;                /* 明顯加大（從1.3rem → 1.8rem） */
+  line-height: 2.2;                 /* 更舒適的行距 */
   color: #ffffff;                   /* 純白，高對比 */
-  margin-bottom: 1.8rem;
+  margin-bottom: 2rem;              /* 每行間距更大 */
   font-weight: 500;
-  letter-spacing: 0.6px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.8);   /* 加強陰影，文字更立體 */
+  letter-spacing: 0.8px;            /* 字距稍拉開，更現代 */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);  /* 加強陰影，讓白字在深色背景上更立體 */
 }
 
-/* 可選：藍色自訂項目符號 */
+/* 可選：藍色自訂項目符號（更匹配主題） */
 .principles li::before {
-  content: "◆";                    /* 或 "→" 或 "•" */
+  content: "◆";                    /* 或 "→" 或 "•" 或 emoji ★ */
   display: inline-block;
-  width: 2rem;
-  margin-left: -2rem;
-  color: #a5d6ff;
-  font-size: 2.2rem;
+  width: 2.2rem;
+  margin-left: -2.2rem;
+  color: #a5d6ff;                  /* 與標題藍色一致 */
+  font-size: 2.4rem;
   vertical-align: middle;
 }
+   。。。
+
+}
+.principles li {
+  background: rgba(15, 35, 70, 0.5);
+  backdrop-filter: blur(10px);
+  /* ... other properties ... */
+  font-size: 1.75rem;   /* ← too small */
+  line-height: 1.6;
+  color: #f0f8ff;      /* ← off-white, not pure white */
+  /* ... */
+}
+
  
  </style>
 
