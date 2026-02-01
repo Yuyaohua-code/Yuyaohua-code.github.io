@@ -263,7 +263,16 @@
   max-width: 900px;
   text-align: left;
 }
-...
+.principles li::before {
+  content: "◆";
+  display: inline-block;
+  width: 2rem;
+  margin-left: -2rem;
+  color: #a5d6ff;
+  font-size: 2.1rem;
+  vertical-align: middle;
+}
+   
 principles li {
   font-size: 1.65rem;              /* 稍大但不擁擠 */
   line-height: 1.9;
