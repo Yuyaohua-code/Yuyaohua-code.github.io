@@ -153,13 +153,21 @@
   0%, 100% { text-shadow: 0 0 20px rgba(165, 214, 255, 0.7); }
   50%      { text-shadow: 0 0 45px rgba(165, 214, 255, 1.0); }
 }
-  
+  ...
+   hero h2 {
+  font-size: 1.9rem;
+  color: #88ccff;
+  margin: 0 0 0.8rem;              /* ← 縮到 0.8rem，列表緊貼 h2 */
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(136, 204, 255, 0.5);
+}
+   ...
 
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #88ccff;                         /* lighter blue accent */
-    margin-top: 0.5rem;       /h2 */ margin-bottom: 1.2rem !important;   /* 原 1.5rem 或 2rem → 1.2rem */
+    margin: 0 0 0.8rem;              /* ← 縮到 0.8rem，列表緊貼 h2 */
     letter-spacing: 2px;
     text-shadow: 0 0 15px rgba(136, 204, 255, 0.5);
 }
