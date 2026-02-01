@@ -128,24 +128,22 @@
     padding: 0 2rem;
   }
 
- .hero h1 {
-    font-size: 3.6rem;                     /* balanced, not too big */
+  .hero h1 {
+    font-size: 3.8rem;
     font-weight: 900;
-    color: #a5d6ff;                        /* exact match to logo/accent blue */
+    color: #a5d6ff;
     text-align: center;
     margin: 1.5rem 0 2.5rem;
-    text-shadow: 
-      0 0 25px rgba(165, 214, 255, 0.7),   /* soft movie glow */
-      0 0 50px rgba(165, 214, 255, 0.4);
-   animation: glowPulse 4s infinite ease-in-out;
+    letter-spacing: 1px;
+    text-shadow: 0 0 20px rgba(165, 214, 255, 0.7);
+    animation: titleBreathe 6s infinite ease-in-out;
 }
 
-@keyframes glowPulse {
-  0%, 100% { text-shadow: 0 0 25px rgba(165, 214, 255, 0.7); }
-  50%      { text-shadow: 0 0 45px rgba(165, 214, 255, 1); }
+@keyframes titleBreathe {
+  0%, 100% { text-shadow: 0 0 20px rgba(165, 214, 255, 0.7); }
+  50%      { text-shadow: 0 0 45px rgba(165, 214, 255, 1.0); }
 }
-   
-
+  
   .hero h1:hover,
    h1:hover {
      text-shadow: 
