@@ -57,22 +57,47 @@
  .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;              /* slightly bigger spacing looks better with blocky style */
   text-decoration: none;
 }
 
+.logo img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  image-rendering: pixelated;           /* ← makes it look cubic/voxel when scaled */
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);  /* hexagon */
+  box-shadow: 
+    0 0 0 4px #2a4a7a,                     /* dark border — gives depth */
+    0 0 0 8px #1e3a66;                     /* outer dark rim */
+}
+
 .logo span {
-  font-size: 1.9rem;
-  font-weight: 800;
-  color: #a5d6ff !important;
-  text-shadow: 0 0 10px rgba(165, 214, 255, 0.6);
-  transition: text-shadow 0.3s;
+  font-size: 2rem;                        /* a bit bigger → more blocky impact */
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #a5d6ff;
+  text-shadow: 
+    3px  3px 0 #5a8cff,
+    6px  6px 0 #3a6cff,
+    9px  9px 0 #1e55e0;                   /* layered shadow = fake 3D extrusion */
+  transition: text-shadow 0.4s, transform 0.25s;
 }
 
 .logo:hover span {
-  text-shadow:
-    0 0 14px rgba(165, 214, 255, 0.9),
-    0 0 24px rgba(88, 166, 255, 0.6);
+  text-shadow: 
+    4px  4px 0 #5a8cff,
+    8px  8px 0 #3a6cff,
+    12px 12px 0 #1e55e0,
+    0 0 16px rgba(165, 214, 255, 0.7);   /* stronger glow on hover */
+  transform: translate(2px, 2px);         /* tiny movement → feels pressed / cubic */
+}
+
+.logo:hover img {
+  box-shadow: 
+    0 0 0 4px #2a4a7a,
+    0 0 0 8px #1e3a66,
+    0 0 20px rgba(100, 180, 255, 0.6);    /* light blue glow on hover */
 }
 
   .nav-links {
