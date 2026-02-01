@@ -201,8 +201,21 @@
     font-size: 0.9rem;
   }
 </style>
- 
 
+  .hero {
+    opacity: 0;
+ b transform: translateY(20px);
+   animation: fadeInHero 1s forwards 0.3s;
+}
+
+  @keyframes fadeInHero {
+   to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  
   /* ==========================================================================
    PRINCIPLES CARDS - Glassmorphism + hover + fade-in
    ========================================================================== */
