@@ -253,7 +253,7 @@
   }, 6000);
 </script>
 
- <section class="hero">
+<section class="hero">
   <h1>耀华格罗克-悟空智能航空</h1>
 
   <h2>天才孵化 × 航空安全 × 行业未来</h2>
@@ -267,6 +267,72 @@
     <li>人工智能守护蓝天</li>
     <li>用最小的成本，创造最大的希望</li>
   </ul>
+
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: 3rem auto;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8rem;
+}
+
+.principles li {
+  background: rgba(15, 35, 70, 0.5);           /* dark transparent blue */
+  backdrop-filter: blur(10px);                 /* glass blur effect */
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(136, 204, 255, 0.33); /* light blue semi-transparent border */
+  border-radius: 12px;
+  padding: 1.6rem 2rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #f0f8ff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover effect: lift + stronger glow */
+.principles li:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(136, 204, 255, 0.4);
+  border-color: #88ccff;
+}
+
+/* Optional: subtle inner glow on hover */
+.principles li:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at 20% 20%, rgba(170, 220, 255, 0.15), transparent 70%);
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Fade-in animation when page loads */
+.principles li {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFade 0.8s forwards;
+}
+
+.principles li:nth-child(1) { animation-delay: 0.1s; }
+.principles li:nth-child(2) { animation-delay: 0.2s; }
+.principles li:nth-child(3) { animation-delay: 0.3s; }
+.principles li:nth-child(4) { animation-delay: 0.4s; }
+.principles li:nth-child(5) { animation-delay: 0.5s; }
+.principles li:nth-child(6) { animation-delay: 0.6s; }
+.principles li:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes cardFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   <div class="buttons">
     <a href="/genius.html" class="btn">进入天才孵化计划</a>
