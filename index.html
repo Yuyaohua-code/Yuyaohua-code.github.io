@@ -243,16 +243,34 @@
 }
 
   
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: 4rem auto 6rem;
+  max-width: 900px;
+  text-align: center;
+}
+
+.principles li {
+  font-size: 1.75rem;               /* 明顯加大，從原來的 1.3rem 提升 */
+  line-height: 2.2;
+  color: #ffffff;                   /* 純白，高對比 */
+  margin-bottom: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);   /* 加強陰影，文字更立體 */
+}
+
+/* 可選：藍色自訂項目符號 */
 .principles li::before {
-  content: "•";
+  content: "◆";                    /* 或 "→" 或 "•" */
   display: inline-block;
-  width: 1.5rem;
-  margin-left: -1.5rem;
-  color: #a5d6ff;                  /* matching blue accent */
-  font-size: 2rem;
+  width: 2rem;
+  margin-left: -2rem;
+  color: #a5d6ff;
+  font-size: 2.2rem;
   vertical-align: middle;
 }
-   ...
  
  </style>
 
