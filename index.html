@@ -55,62 +55,7 @@
     gap: 2rem;
   }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  text-decoration: none;
-  perspective: 1000px;                /* Enables nice 3D space */
-}
 
-.logo img {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  image-rendering: pixelated;         /* Strong voxel / cubic pixel look */
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon */
-  box-shadow:
-    0 6px 0 #88ccff,                  /* Light blue bottom face */
-    0 12px 0 #77bbff,                 /* Deeper layer */
-    0 18px 0 #66aaff,                 /* Even deeper */
-    0 0 20px rgba(170, 220, 255, 0.5); /* Soft glow */
-  transform: translateZ(12px);
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-.logo:hover img {
-  transform: translateZ(24px) scale(1.04);
-  box-shadow:
-    0 10px 0 #88ccff,
-    0 20px 0 #77bbff,
-    0 30px 0 #66aaff,
-    0 0 30px rgba(170, 220, 255, 0.8);
-}
-
-.logo span {
-  font-size: 2.1rem;
-  font-weight: 900;
-  letter-spacing: 1.5px;
-  color: #a5d6ff;
-  text-shadow:
-    4px  4px 0 #bbddff,
-    8px  8px 0 #aaddff,
-    12px 12px 0 #99ccff,
-    16px 16px 0 #88bbff,
-    0    0   24px rgba(170, 220, 255, 0.6);
-  transform: translateZ(18px) rotateX(-4deg);
-  transition: text-shadow 0.4s, transform 0.4s;
-}
-
-.logo:hover span {
-  text-shadow:
-    6px  6px 0 #bbddff,
-    12px 12px 0 #aaddff,
-    18px 18px 0 #99ccff,
-    24px 24px 0 #88bbff,
-    0    0   32px rgba(170, 220, 255, 0.9);
-  transform: translateZ(32px) rotateX(-8deg) rotateY(6deg);
-}
 
   .nav-links {
     display: flex;
