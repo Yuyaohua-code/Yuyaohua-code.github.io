@@ -128,18 +128,38 @@
     padding: 0 2rem;
   }
 
-  h1 {
-    font-size: 4.5rem;
-    margin: 0;
-    color: var(--accent);
-  }
+
+   .h1 {
+      font-size: 3.2rem;               /* smaller & more balanced than 4.5rem */
+      font-weight: 900;
+      margin: 1rem 0 1.5rem;
+      color: #a5d6ff;
+      letter-spacing: 1px;
+      text-shadow: 
+      4px  4px 0 #bbddff,
+      8px  8px 0 #aaddff,
+      12px 12px 0 #99ccff,
+      16px 16px 0 #88bbff,
+      0 0 25px rgba(170, 220, 255, 0.6);
+      transition: text-shadow 0.4s, transform 0.4s;
+}
+
+  .h1:hover {
+     text-shadow: 
+     6px  6px 0 #bbddff,
+     12px 12px 0 #aaddff,
+     18px 18px 0 #99ccff,
+     24px 24px 0 #88bbff,
+     0 0 40px rgba(170, 220, 255, 0.9);
+     transform: translateZ(15px) rotateX(-4deg);
+}
 
    h2 {
-  color: #88ccff;
-  text-shadow: 0 0 12px rgba(136, 204, 255, 0.5);
-  letter-spacing: 2px;
-  font-weight: 400;
-  margin: 1.5rem 0 3rem;
+     color: #88ccff;
+     text-shadow: 0 0 12px rgba(136, 204, 255, 0.5);
+     letter-spacing: 2px;
+     font-weight: 400;
+     margin: 1.5rem 0 3rem;
 }
  
   p {
