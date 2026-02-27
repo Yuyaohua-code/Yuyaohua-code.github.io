@@ -5,28 +5,307 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yaohua Tech · Genius Incubation × Aviation Safety × Human Future</title>
   <style>
-    :root{--bg:#0d1117;--text:#f0f6fc;--accent:#58a6ff;--card:#161b22}
-    @media (prefers-color-scheme: light){
-      :root{--bg:#ffffff;--text:#24292f;--accent:#0969da;--card:#f6f8fa}
+  :root {
+    --bg: #0d1117;
+    --text: #f0f6fc;
+    --accent: #58a6ff;
+    --card: #161b22; 
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --text: #24292f;
+      --accent: #0969da;
+      --card: #f6f8fa;
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-    header{position:fixed;top:0;width:100%;background:rgba(13,17,23,0.95);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid #30363d}
-    nav{max-width:1200px;margin:auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:1.8rem;font-weight:800;color:var(--accent);text-decoration:none}
-    .nav-links a{margin:0 1rem;color:var(--text);text-decoration:none;font-weight:500;transition:0.3s}
-    .nav-links a:hover{color:var(--accent)}
-    .lang a{color:var(--text);font-weight:bold;margin:0 0.5rem}
-    .lang .active{color:var(--accent)}
-    .hero{height:100vh;display:grid;place-items:center;text-align:center;padding:0 2rem}
-    h1{font-size:4.5rem;margin:0;color:var(--accent)}
-    h2{font-size:2.2rem;margin:1.5rem 0;font-weight:300;color:#8b949e}
-    p{font-size:1.4rem;max-width:800px;margin:auto}
-    .buttons{margin-top:3rem}
-    .btn{display:inline-block;margin:1rem;padding:1rem 2.5rem;background:var(--card);color:var(--accent);text-decoration:none;border-radius:8px;font-weight:600;border:1px solid #30363d;transition:0.3s}
-    .btn:hover{background:var(--accent);color:var(--bg)}
-    footer{text-align:center;padding:4rem;color:#8b949e;font-size:0.9rem}
-  </style>
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13,17,23,0.95);   /* or var(--bg) with opacity */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #30363d;
+}
+  
+  nav {
+    max-width: 1400px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+ .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #a5d6ff !important;
+  text-shadow: 0 0 10px rgba(165, 214, 255, 0.6);
+  transition: text-shadow 0.3s;
+}
+
+.logo:hover span {
+  text-shadow:
+    0 0 14px rgba(165, 214, 255, 0.9),
+    0 0 24px rgba(88, 166, 255, 0.6);
+}
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+  }
+
+  .nav-links a:hover {
+    color: #a5d6ff;
+  }
+
+  .lang-selector select {
+    background: rgba(30,35,45,0.92);
+    color: #a5d6ff;
+    border: 1px solid #444c56;
+    padding: 9px 36px 9px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a5d6ff' d='M6 9L2 5h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    transition: all 0.2s ease;
+  }
+
+  .lang-selector select:hover,
+  .lang-selector select:focus {
+    background-color: rgba(40,45,55,0.95);
+    box-shadow: 0 0 0 3px rgba(165,214,255,0.15);
+    outline: none;
+  }
+
+  /* Hero & content styles */
+  .hero {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+.hero h1 {
+  font-size: 2.8rem;                    /* 從 3.8rem 降到 3.4rem，更平衡 */
+  font-weight: 900;
+  color: #a5d6ff;
+  text-align: center;
+   margin: 1rem 0 0.4rem;           /* ← 極緊湊，h1 與 h2 幾乎貼近 */
+  letter-spacing: 1px;
+  text-shadow: 0 0 25px rgba(165, 214, 255, 0.7);
+  animation: titleBreathe 6s infinite ease-in-out;
+    
+  transition: all 0.5s ease;
+}
+
+.hero h1:hover {
+  text-shadow: 
+    6px  6px 0 #bbddff,
+    0 0 50px rgba(165, 214, 255, 0.9);
+  transform: translateZ(25px) rotateX(-6deg);   /* 更明顯的 3D 彈出 */
+}
+   
+
+@keyframes titleBreathe {
+  0%, 100% { text-shadow: 0 0 20px rgba(165, 214, 255, 0.7); }
+  50%      { text-shadow: 0 0 45px rgba(165, 214, 255, 1.0); }
+}
+  ...
+   hero h2 {
+  font-size: 1.9rem;
+ color: #a5d6ff;
+  margin: 0 0 0.8rem;              /* ← 縮到 0.8rem，列表緊貼 h2 */
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(136, 204, 255, 0.5);
+}
+   ...
+  .hero h2 {
+    font-size: 1.9rem;
+    color: #88ccff;                         /* lighter blue accent */
+    margin-bottom: 0.8rem;       
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(136, 204, 255, 0.5);
+}
+ 
+
+ 
+  p {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: auto;
+  }
+
+
+/* Optional: make hero shorter if still scrolling */
+.hero {
+  min-height: 80vh !important;        /* 原 100vh → 80vh, 減少整體高度 */
+  padding-bottom: 2rem;
+}
+  
+  .buttons {
+    margin-top: 1.2rem !important;   /* 原 3rem → 1.2rem，按鈕上移 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;             
+  }
+
+ .btn {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 2.5rem;
+  background: var(--card);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid #30363d;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(165, 214, 255, 0.5);
+  filter: brightness(1.1);
+}
+  
+  .footer {
+    text-align: center;
+    padding: 4rem;
+    color: #8b949e;
+    font-size: 0.9rem;
+  }
+
+   /* Hero background with subtle animated glow/particles */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a1f3a 0%, #000 100%);
+}
+
+   
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 80vh !important;     /* 從 100vh 減到 80vh */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  background: radial-gradient(circle at 20% 30%, rgba(165, 214, 255, 0.15) 0%, transparent 60%);
+  animation: pulseGlow 8s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+.hero::after {
+  background: radial-gradient(circle at 80% 70%, rgba(136, 204, 255, 0.12) 0%, transparent 70%);
+  animation: pulseGlow 12s infinite ease-in-out reverse;
+  opacity: 0.5;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%      { transform: scale(1.3); opacity: 0.9; }
+}
+
+
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem auto 2.5rem;      /* ← top 0.8rem + bottom 2.5rem → 按鈕上移很多 */
+  max-width: 900px;
+  text-align: left;
+}
+.principles li::before {
+  content: "◆";
+  display: inline-block;
+  width: 2rem;
+  margin-left: -2rem;
+  color: #a5d6ff;
+  font-size: 2.1rem;
+  vertical-align: middle;
+}
+   
+principles li {
+  font-size: 1.65rem;              /* 稍大但不擁擠 */
+  line-height: 1.9;
+  color: #ffffff;
+  margin-bottom: 1.1rem;           /* 行距緊湊但可讀 */
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+   ...
+ 
+.principles li {
+  font-size: 1.65rem;                 /* 稍大但不擁擠 */
+  line-height: 1.9;                 /* 更舒適的行距 */
+  color: #ffffff;                   /* 純白，高對比 */
+  margin-bottom: 1.1rem;           /* 行距緊湊但可讀 */
+  font-weight: 500;
+  letter-spacing: 0.6px;            /* 字距稍拉開，更現代 */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);  /* 加強陰影，讓白字在深色背景上更立體 */
+}
+
+
+.principles li {
+  background: rgba(15, 35, 70, 0.5);
+  backdrop-filter: blur(10px);
+  /* ... other properties ... */
+  font-size: 1.75rem;   /* ← too small */
+  line-height: 1.6;
+  color: #f0f8ff;      /* ← off-white, not pure white */
+  /* ... */
+}
+
+ 
+ </style>
 </head>
 <body>
   <header>
