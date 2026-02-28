@@ -334,6 +334,7 @@ hero {
         Wukong AI Aviation
       </span>
       </a>
+    <!-- Navigation Links -->
       <div class="nav-links">
         <a href="/en/">Home</a>
         <a href="/en/about.html">About</a>
@@ -343,8 +344,15 @@ hero {
         <a href="/en/partner.html">Partnership</a>
         <a href="/en/buy.html">Purchase</a>
       </div>
-      <div class="lang">
-        <a href="/">中</a> / <span class="active">EN</span>
+
+    <!-- Language Selector (Dropdown) --> 
+      <div class="lang-selector">
+      <select id="langSwitch" 
+              onchange="window.location.href = this.value;"
+              style="background: rgba(22,27,34,0.85); color: #79c0ff; border: 1px solid #30363d; padding: 8px 14px; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; outline: none;">
+        <option value="/" selected>中文</option>
+        <option value="/en/">English</option>
+      </select>
       </div>
     </nav>
   </header>
