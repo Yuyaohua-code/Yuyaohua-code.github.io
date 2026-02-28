@@ -9,3 +9,442 @@
   <p>This is the start of the Traditional Chinese site for Hong Kong, Macau, Taiwan.</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaohua Tech · Genius Incubation × Aviation Safety × Human Future</title>
+  <style>
+  :root {
+    --bg: #0d1117;
+    --text: #f0f6fc;
+    --accent: #58a6ff;
+    --card: #161b22; 
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --text: #24292f;
+      --accent: #0969da;
+      --card: #f6f8fa;
+    }
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(13,17,23,0.95);   /* or var(--bg) with opacity */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid #30363d;
+}
+  
+  nav {
+    max-width: 1400px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+
+ .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo span {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #a5d6ff !important;
+  text-shadow: 0 0 10px rgba(165, 214, 255, 0.6);
+  transition: text-shadow 0.3s;
+}
+
+.logo:hover span {
+  text-shadow:
+    0 0 14px rgba(165, 214, 255, 0.9),
+    0 0 24px rgba(88, 166, 255, 0.6);
+}
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+  }
+
+  .nav-links a:hover {
+    color: #a5d6ff;
+  }
+
+  .lang-selector select {
+    background: rgba(30,35,45,0.92);
+    color: #a5d6ff;
+    border: 1px solid #444c56;
+    padding: 9px 36px 9px 16px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a5d6ff' d='M6 9L2 5h8z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    transition: all 0.2s ease;
+  }
+
+  .lang-selector select:hover,
+  .lang-selector select:focus {
+    background-color: rgba(40,45,55,0.95);
+    box-shadow: 0 0 0 3px rgba(165,214,255,0.15);
+    outline: none;
+  }
+
+  /* Hero & content styles */
+  .hero {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+.hero h1 {
+  font-size: 2.8rem;                    /* 從 3.8rem 降到 3.4rem，更平衡 */
+  font-weight: 900;
+  color: #a5d6ff;
+  text-align: center;
+   margin: 1rem 0 0.4rem;           /* ← 極緊湊，h1 與 h2 幾乎貼近 */
+  letter-spacing: 1px;
+  text-shadow: 0 0 25px rgba(165, 214, 255, 0.7);
+  animation: titleBreathe 6s infinite ease-in-out;
+    
+  transition: all 0.5s ease;
+}
+
+.hero h1:hover {
+  text-shadow: 
+    6px  6px 0 #bbddff,
+    0 0 50px rgba(165, 214, 255, 0.9);
+  transform: translateZ(25px) rotateX(-6deg);   /* 更明顯的 3D 彈出 */
+}
+   
+
+@keyframes titleBreathe {
+  0%, 100% { text-shadow: 0 0 20px rgba(165, 214, 255, 0.7); }
+  50%      { text-shadow: 0 0 45px rgba(165, 214, 255, 1.0); }
+}
+  ...
+   hero h2 {
+  font-size: 1.9rem;
+ color: #a5d6ff;
+  margin: 0 0 0.8rem;              /* ← 縮到 0.8rem，列表緊貼 h2 */
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(136, 204, 255, 0.5);
+}
+   ...
+  .hero h2 {
+    font-size: 1.9rem;
+    color: #88ccff;                         /* lighter blue accent */
+    margin-bottom: 0.8rem;       
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(136, 204, 255, 0.5);
+}
+ 
+
+ 
+  p {
+    font-size: 1.4rem;
+    max-width: 800px;
+    margin: auto;
+  }
+
+
+/* Optional: make hero shorter if still scrolling */
+.hero {
+  min-height: 80vh !important;        /* 原 100vh → 80vh, 減少整體高度 */
+  padding-bottom: 2rem;
+}
+  
+  .buttons {
+    margin-top: 1.2rem !important;   /* 原 3rem → 1.2rem，按鈕上移 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;             
+  }
+
+ .btn {
+  display: inline-block;
+  margin: 1rem;
+  padding: 1rem 2.5rem;
+  background: var(--card);
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid #30363d;
+  transition: all 0.4s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(165, 214, 255, 0.5);
+  filter: brightness(1.1);
+}
+  
+  .footer {
+    text-align: center;
+    padding: 4rem;
+    color: #8b949e;
+    font-size: 0.9rem;
+  }
+
+   /* Hero background with subtle animated glow/particles */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0a1f3a 0%, #000 100%);
+}
+
+   
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  min-height: 80vh !important;     /* 從 100vh 減到 80vh */
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.hero::before {
+  background: radial-gradient(circle at 20% 30%, rgba(165, 214, 255, 0.15) 0%, transparent 60%);
+  animation: pulseGlow 8s infinite ease-in-out;
+  opacity: 0.7;
+}
+
+.hero::after {
+  background: radial-gradient(circle at 80% 70%, rgba(136, 204, 255, 0.12) 0%, transparent 70%);
+  animation: pulseGlow 12s infinite ease-in-out reverse;
+  opacity: 0.5;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%      { transform: scale(1.3); opacity: 0.9; }
+}
+
+
+.principles {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem auto 2.5rem;      /* ← top 0.8rem + bottom 2.5rem → 按鈕上移很多 */
+  max-width: 900px;
+  text-align: left;
+}
+.principles li::before {
+  content: "◆";
+  display: inline-block;
+  width: 2rem;
+  margin-left: -2rem;
+  color: #a5d6ff;
+  font-size: 2.1rem;
+  vertical-align: middle;
+}
+   
+principles li {
+  font-size: 1.65rem;              /* 稍大但不擁擠 */
+  line-height: 1.9;
+  color: #ffffff;
+  margin-bottom: 1.1rem;           /* 行距緊湊但可讀 */
+  font-weight: 500;
+  letter-spacing: 0.6px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+}
+   ...
+ 
+.principles li {
+  font-size: 1.65rem;                 /* 稍大但不擁擠 */
+  line-height: 1.9;                 /* 更舒適的行距 */
+  color: #ffffff;                   /* 純白，高對比 */
+  margin-bottom: 1.1rem;           /* 行距緊湊但可讀 */
+  font-weight: 500;
+  letter-spacing: 0.6px;            /* 字距稍拉開，更現代 */
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);  /* 加強陰影，讓白字在深色背景上更立體 */
+}
+
+
+.principles li {
+  background: rgba(15, 35, 70, 0.5);
+  backdrop-filter: blur(10px);
+  /* ... other properties ... */
+  font-size: 1.75rem;   /* ← too small */
+  line-height: 1.6;
+  color: #f0f8ff;      /* ← off-white, not pure white */
+  /* ... */
+}
+
+ 
+ </style>
+
+hero {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpHero 1.2s forwards 0.4s;
+}
+
+@keyframes fadeUpHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+</head>
+<body>
+  <header>
+    <nav>
+    <!-- Wukong Monkey Logo + Company Name -->
+      <a href="/" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+      <img src="https://images.squarespace-cdn.com/content/v1/60dfda46e9db711afe482476/7cabef6a-00ba-457d-a71f-ea26e1dfe80b/Sun+Wukong.png" 
+       alt="Wukong Monkey King" 
+       style="height: 52px; width: auto; border-radius: 50%; box-shadow: 0 2px 10px rgba(88,166,255,0.4);">
+      <span style="font-size: 1.9rem; font-weight: 800; color: #a5d6ff; text-shadow: 0 0 6px rgba(165,214,255,0.5);">
+            <span>Yaohua Grok - Wukong AI Aviation</span>
+      </span>
+      </a>
+    <!-- Navigation Links -->
+      <div class="nav-links">
+        <a href="/en/">Home</a>
+        <a href="/en/about.html">About</a>
+        <a href="/en/genius.html">Genius Incubation</a>
+        <a href="/en/ai-aviation.html">AI Aviation</a>
+        <a href="/en/jobs.html">Careers</a>
+        <a href="/en/partner.html">Partnership</a>
+        <a href="/en/buy.html">Purchase</a>
+      </div>
+
+    <!-- Language Selector (Dropdown) --> 
+       <div class="lang-selector">
+        <select onchange="window.location.href = this.value;">
+          <option value="/" selected>English</option>
+          <option value="/en/">简体中文</option>
+          <option value="/tw/">繁體中文</option>
+        </select>
+       </div>
+    </nav> 
+  </header>
+
+<!-- 视频容器 -->  
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 40px auto;">
+  <iframe src="https://www.youtube.com/embed/yNnGHypTkEY?controls=1&rel=0&playsinline=1" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+          allow="encrypted-media" allowfullscreen></iframe>
+</div>
+   <!-- 添加声音提示层 -->
+    <div id="soundPrompt" style="
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #a5d6ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 1.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  ">
+    Click the speaker 🔊 (bottom left) to enable sound
+    </div>
+  </div>
+
+  <script>
+  // 6秒后自动淡出并隐藏提示
+  setTimeout(() => {
+    const prompt = document.getElementById('soundPrompt');
+    if (prompt) {
+      prompt.style.opacity = '0';
+      setTimeout(() => { prompt.style.display = 'none'; }, 1200);
+    }
+  }, 6000);
+  </script>
+  
+  <section class="hero">
+    <h1>YaohuaGrok </h1>
+    
+    <h2>Genius Incubation × AI Aviation Safety × Human Future</h2>
+
+    <ul class="principles">
+        <li>Introduction to the Origin of First Principles</li>
+        <li>First Principles in Mao Zedong's Poetry</li>
+        <li>First Principles of Accidents</li>
+        <li>First Principles of Maximum Returns</li>
+        <li>First Principles Ignite Genius</li>
+        <li>Artificial Intelligence Guards the Blue Sky</li>
+        <li>Create Maximum Hope with Minimum Cost</li>
+    </ul>
+    
+    <p>We ignite genius with first principles<br>
+    We safeguard the skies with artificial intelligence<br>
+    We create the greatest hope with the smallest cost</p>
+
+
+    
+    <div class="buttons" style="text-align: center; margin: 40px 0;">
+      <a href="/en/genius.html" class="btn">Enter Genius Incubation Program</a>
+      <a href="/en/ai-aviation.html" class="btn">Explore AI Aviation Safety</a>
+      <!-- Orange button: Read White Paper Online -->
+      <a href="https://m.toutiao.com/is/wZPee2ccLAw/" target="_blank" class="btn" style="background: #ff4500;">📜 Read White Paper Online </a>
+      <!-- Green button: Download White Paper PDF (English, correct relative path) -->
+      <a href="https://raw.githubusercontent.com/Yuyaohua-code/Yuyaohua-code.github.io/main/assets/AI-Aviation-White-Paper-EN-20251230 .pdf"  
+      download="YaohuaGrok-AI-Aviation-White-Paper-EN-20251230.pdf"
+  target="_blank" 
+  class="btn" 
+  style="background: #28a745;">
+  📄 Download White Paper PDF</a>
+    </div>
+  </section>
+  
+  <footer>
+    © 2025 Yaohua Tech · yaohua@yaohuagrok.com · Let the world be filled with love and hope
+  </footer>
+</body>
+</html>
