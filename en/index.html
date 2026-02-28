@@ -355,6 +355,7 @@ hero {
       </select>
       </div>
     </nav>
+    
   </header>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; margin: 40px auto;">
   <iframe src="https://www.youtube.com/embed/yNnGHypTkEY?controls=1&rel=0&playsinline=1" 
@@ -362,9 +363,27 @@ hero {
           allow="encrypted-media" allowfullscreen></iframe>
 </div>
    <!-- 添加声音提示层 -->
-    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-size: 28px; text-shadow: 2px 2px 8px black; pointer-events: none; z-index: 10;">
-    Click 🔊 (bottom left) to enable sound
-   </div>
+     <div id="soundPrompt" style="
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0,0,0,0.6);
+    color: #a5d6ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 1.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  ">
+    Click the speaker 🔊 (bottom left) to enable sound
+  </div>
   </div>
 </div>
   <section class="hero">
