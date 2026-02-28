@@ -306,6 +306,20 @@ principles li {
 
  
  </style>
+
+hero {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUpHero 1.2s forwards 0.4s;
+}
+
+@keyframes fadeUpHero {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
 </head>
 <body>
   <header>
