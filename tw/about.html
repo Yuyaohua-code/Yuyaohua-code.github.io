@@ -86,25 +86,7 @@
       text-shadow: 0 0 10px rgba(165,214,255,0.9);
     }
 
-    
-    /* Make border and other properties transition smoothly */
-    .nav-links a {
-       color: var(--text);
-       text-decoration: none;
-       font-weight: 500;
-       white-space: nowrap;
-       transition: 
-         color 0.25s ease,
-         border-bottom 0.3s ease,     /* ← add this */
-         padding-bottom 0.3s ease,    /* ← add this */
-         font-weight 0.3s ease;       /* ← optional, but nice */
-      border-bottom: 2px solid transparent;  /* ← important: start invisible */
-    }
-
-/* Hover: show underline gradually */
-/* Make border and other properties transition smoothly */
-
-
+   /* Make border and other properties transition smoothly */
     .nav-links {
       display: flex;
       flex-wrap: wrap;
@@ -126,14 +108,11 @@
        border-bottom: 2px solid transparent;  /* ← important: start invisible */
      }
 
-
-
     .nav-links a:hover {
       color: #a5d6ff;
       border-bottom: 2px solid #a5d6ff;
       padding-bottom: 4px;
      }
-
  
    /* Active (current page): same style as hover, but permanent */
    .nav-links a.active {
@@ -143,7 +122,6 @@
       font-weight: 600;
       pointer-events: none;        /* optional: no click on current page */
    }
-
     
     .lang-selector select {
       background: rgba(30,35,45,0.92);
