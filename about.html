@@ -1,42 +1,214 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我们 · 耀华科技</title>
+  <title>关于我们 · 耀华格罗克 · 悟空智能航空</title>
   <style>
-    :root{--bg:#0d1117;--text:#f0f6fc;--accent:#58a6ff;--card:#161b22}
-    @media (prefers-color-scheme: light){
-      :root{--bg:#ffffff;--text:#24292f;--accent:#0969da;--card:#f6f8fa}
+    :root {
+      --bg: #0d1117;
+      --text: #f0f6fc;
+      --accent: #58a6ff;
+      --card: #161b22;
+      transition: background 0.3s ease, color 0.3s ease;
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
-    header{position:fixed;top:0;width:100%;background:rgba(13,17,23,0.95);backdrop-filter:blur(10px);z-index:1000;border-bottom:1px solid #30363d}
-    nav{max-width:1200px;margin:auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
-    .logo{font-size:1.8rem;font-weight:800;color:var(--accent);text-decoration:none}
-    .nav-links a{margin:0 1rem;color:var(--text);text-decoration:none;font-weight:500;transition:0.3s}
-    .nav-links a:hover{color:var(--accent)}
-    .lang a{color:var(--text);font-weight:bold;margin:0 0.5rem}
-    .lang .active{color:var(--accent)}
-    main{padding-top:100px;max-width:1000px;margin:auto;padding:4rem 2rem}
-    h1{font-size:3.5rem;text-align:center;margin:2rem 0;color:var(--accent)}
-    h2{font-size:2rem;margin:3rem 0 1.5rem;color:var(--accent)}
-    p{font-size:1.2rem;margin:1.5rem 0;max-width:800px}
-    ul{list-style:none;padding-left:1rem}
-    li{margin:1rem 0;font-size:1.2rem;position:relative}
-    li:before{content:"·";color:var(--accent);font-size:2rem;position:absolute;left:-1rem;top:-0.5rem}
-    .team{margin:4rem 0}
-    .team p{font-style:italic;color:#8b949e}
-    .responsibility{background:var(--card);padding:2.5rem;border-radius:12px;margin:4rem 0;box-shadow:0 4px 20px rgba(0,0,0,0.3)}
-    .responsibility p{font-size:1.3rem}
-    footer{text-align:center;padding:4rem;color:#8b949e;font-size:0.9rem}
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --text: #24292f;
+        --accent: #0969da;
+        --card: #f6f8fa;
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(13,17,23,0.95);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid #30363d;
+    }
+
+    nav {
+      max-width: 1400px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 52px;
+      width: auto;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(88,166,255,0.4);
+    }
+
+    .logo span {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #a5d6ff !important;
+      text-shadow: 0 0 6px rgba(165,214,255,0.5);
+    }
+
+    .logo:hover span {
+      text-shadow: 0 0 10px rgba(165,214,255,0.9);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: flex-end;
+      margin-left: auto;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      white-space: nowrap;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #a5d6ff;
+    }
+
+    .lang-selector select {
+      background: rgba(30,35,45,0.92);
+      color: #a5d6ff;
+      border: 1px solid #444c56;
+      padding: 9px 36px 9px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a5d6ff' d='M6 9L2 5h8z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      transition: all 0.2s ease;
+    }
+
+    .lang-selector select:hover,
+    .lang-selector select:focus {
+      background-color: rgba(40,45,55,0.95);
+      box-shadow: 0 0 0 3px rgba(165,214,255,0.15);
+      outline: none;
+    }
+
+    main {
+      padding-top: 120px; /* 給 fixed header 留空間 */
+      max-width: 1000px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      text-align: center;
+      margin: 2rem 0;
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin: 3rem 0 1.5rem;
+      color: var(--accent);
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 1.5rem 0;
+      max-width: 800px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    li {
+      margin: 1rem 0;
+      font-size: 1.2rem;
+      position: relative;
+    }
+
+    li:before {
+      content: "·";
+      color: var(--accent);
+      font-size: 2rem;
+      position: absolute;
+      left: -1rem;
+      top: -0.5rem;
+    }
+
+    .team {
+      margin: 4rem 0;
+    }
+
+    .team p {
+      font-style: italic;
+      color: #8b949e;
+    }
+
+    .responsibility {
+      background: var(--card);
+      padding: 2.5rem;
+      border-radius: 12px;
+      margin: 4rem 0;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .responsibility p {
+      font-size: 1.3rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem;
+      color: #8b949e;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <header>
     <nav>
-      <a href="/" class="logo">耀华科技</a>
+      <!-- Wukong Monkey Logo + Company Name -->
+      <a href="/" class="logo">
+        <img src="https://images.squarespace-cdn.com/content/v1/60dfda46e9db711afe482476/7cabef6a-00ba-457d-a71f-ea26e1dfe80b/Sun+Wukong.png" 
+             alt="Wukong Monkey King">
+        <span>耀华格罗克-悟空智能航空</span>
+      </a>
+
+      <!-- Navigation Links -->
       <div class="nav-links">
         <a href="/">首页</a>
         <a href="/about.html">组织介绍</a>
@@ -46,20 +218,26 @@
         <a href="/partner.html">合作机会</a>
         <a href="/buy.html">购买产品</a>
       </div>
-      <div class="lang">
-        <span class="active">中</span> / <a href="/en/about.html">EN</a>
+
+      <!-- Language Selector (Dropdown) -->
+      <div class="lang-selector">
+        <select onchange="window.location.href = this.value;">
+          <option value="/">简体中文</option>
+          <option value="/en/">English</option>
+          <option value="/tw/" selected>繁體中文</option>
+        </select>
       </div>
     </nav>
   </header>
 
   <main>
-    <h1>关于耀华科技</h1>
+    <h1>关于耀华格罗克</h1>
     <p style="text-align:center;font-size:1.5rem;max-width:900px;margin:auto;">
       我们用第一性原理点燃天才，用人工智能守护蓝天，用最小的成本，创造最大的希望。
     </p>
 
     <h2>我们的使命</h2>
-    <p>耀华科技由一线航空人创立，致力于：</p>
+    <p>耀华格罗克由一线航空人创立，致力于：</p>
     <ul>
       <li>通过“天才孵化计划”，用第一性原理发现并培养能改变世界的思想者</li>
       <li>构建全球领先的AI航空安全体系，让每一次飞行都更可信、更安全</li>
@@ -79,7 +257,7 @@
 
     <h2>我们的社会责任</h2>
     <div class="responsibility">
-      <p>耀华科技将社会责任融入每一行代码、每一条规则、每一次行动：</p>
+      <p>耀华格罗克将社会责任融入每一行代码、每一条规则、每一次行动：</p>
       <ul>
         <li>支持人类的共同生存——主动阻止黑天鹅事件，守护每一条生命</li>
         <li>低碳飞行——AI优化航路，显著减少碳排放</li>
@@ -98,7 +276,7 @@
   </main>
 
   <footer>
-    © 2025 耀华科技 · 让世界充满爱与希望
+    © 2025 耀华格罗克 · yaohua@yaohuagrok.com · 第一性原理的传播者 让世界充满爱与希望
   </footer>
 </body>
 </html>
